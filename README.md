@@ -1,4 +1,4 @@
-# ASP.NET Core with MS SQL DB Sample Application
+# ASP.NET Core with MSSQL DB Sample Application
 
 ## Installing Person Database
  To install person database, run `PersonDirectory.sql` script under `SQLDbScript` folder
