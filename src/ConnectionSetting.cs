@@ -32,7 +32,7 @@ namespace Click2Cloud.Samples.AspNetCore.MvcSQLDb
                 || string.IsNullOrEmpty(SQLDB_SERVER) || string.IsNullOrEmpty(SQLDB_DATABASE) 
                 || string.IsNullOrEmpty(SQLDB_PORT)))
                 {
-                    string _connectionString = string.Format("Data Source={0},1433; Initial Catalog=MVCPersonDB; User ID=sa; Password=newuser@123", SQLDB_SERVER, SQLDB_DATABASE,
+                    string _connectionString = string.Format("Data Source=192.168.0.130,1433; Initial Catalog=MVCPersonDB; User ID=sa; Password=ROOT#123", SQLDB_SERVER, SQLDB_DATABASE,
                     SQLDB_USER, SQLDB_PASSWORD, SQLDB_PORT);
 
                     return _connectionString;
