@@ -28,7 +28,7 @@ namespace Click2Cloud.Samples.AspNetCore.MvcSQLDb
         {
             get
                 {
-                    string _connectionString = string.Format("Data Source={0},1433; Initial Catalog=MVCPersonDB; User ID=sa; Password={3}", SQLDB_SERVER, SQLDB_DATABASE, SQLDB_USER, SQLDB_PASSWORD, SQLDB_PORT);
+                    string _connectionString = string.Format("Data Source={0},{4}; Initial Catalog=MVCPersonDB; User ID=sa; Password={3}", SQLDB_SERVER, SQLDB_DATABASE, SQLDB_USER, SQLDB_PASSWORD, SQLDB_PORT);
 
                     return _connectionString;
                 }
@@ -90,9 +90,9 @@ namespace Click2Cloud.Samples.AspNetCore.MvcSQLDb
         {
             get
             {
-                if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SQLDB_PORT")))
+                if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MSSQL_SERVICE_PORT")))
                 {
-                    return Environment.GetEnvironmentVariable("SQLDB_PORT");
+                    return Environment.GetEnvironmentVariable("MSSQL_SERVICE_PORT");
                 }
 
                 return string.Empty;
