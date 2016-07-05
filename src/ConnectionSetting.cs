@@ -27,20 +27,11 @@ namespace Click2Cloud.Samples.AspNetCore.MvcSQLDb
         internal static string CONNECTION_STRING
         {
             get
-            {
-                if (!(string.IsNullOrEmpty(SQLDB_USER) || string.IsNullOrEmpty(SQLDB_PASSWORD)
-                || string.IsNullOrEmpty(SQLDB_SERVER) || string.IsNullOrEmpty(SQLDB_DATABASE) 
-                || string.IsNullOrEmpty(SQLDB_PORT)))
                 {
                     string _connectionString = string.Format("Data Source={0},1433; Initial Catalog=MVCPersonDB; User ID=sa; Password=newuser@123", SQLDB_SERVER, SQLDB_DATABASE, SQLDB_USER, SQLDB_PASSWORD, SQLDB_PORT);
 
                     return _connectionString;
                 }
-                else
-                {
-                    throw new Exception("Environment variables not set.");
-                }
-            }
         }
 
         private static string SQLDB_SERVER
